@@ -4,7 +4,8 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                echo 'Hello World'
+                git 'https://github.com/Tony1982-sys/DevOpsClassCodes-aug.git'
+                sh 'cd DevOpsClassCodes-aug'
                 
             }
         }
