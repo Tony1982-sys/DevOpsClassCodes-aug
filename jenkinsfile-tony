@@ -11,20 +11,21 @@ pipeline {
          stage('Compiling') {
             steps {
           
-                echo 'Hello World'
+                sh 'mvn compile'
         
             }
+            
         }
          stage('Testing') {
             steps {
                
-                echo 'Hello World'
+                sh 'mvn test'
             }
         }
          stage('Package') {
             steps {
                 
-                echo 'Hello World'
+                sh 'mvn package'
             }
         }
          stage('Docker login') {
