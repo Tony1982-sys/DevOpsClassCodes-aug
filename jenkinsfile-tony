@@ -19,7 +19,7 @@ pipeline {
         }
          stage('Package') {
             steps {
-                echo 'Hello world'
+                sh 'mvn package'
             }
         }
          stage('Docker login') {
