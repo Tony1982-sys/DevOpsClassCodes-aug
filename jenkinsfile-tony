@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Compiling') {
+        stage('directory') {
             steps {
           
                 sh 'cd DevOpsClassCodes-aug'
