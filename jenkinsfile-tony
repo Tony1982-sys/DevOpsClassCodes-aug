@@ -5,6 +5,8 @@ pipeline {
         stage('Checkout') {
             steps {
                 git 'https://github.com/Tony1982-sys/DevOpsClassCodes-aug.git'
+                sh 'pwd'
+                sh 'ls'
             }
         }
          stage('Compiling') {
