@@ -2,16 +2,25 @@ pipeline {
     agent any
 
     stages {
+        stage('Compiling') {
+            steps {
+          
+                sh 'cd DevOpsClassCodes-aug'
+        
+            }
+            
+        }
         stage('Checkout') {
             steps {
                 git 'https://github.com/Tony1982-sys/DevOpsClassCodes-aug.git'
                 
             }
         }
+        
          stage('Compiling') {
             steps {
           
-                sh 'mvn compile'
+                echo 'hello world'
         
             }
             
@@ -19,13 +28,13 @@ pipeline {
          stage('Testing') {
             steps {
                
-                sh 'mvn test'
+                echo 'hello world'
             }
         }
          stage('Package') {
             steps {
                 
-                sh 'mvn package'
+                echo 'hello world'
             }
         }
          stage('Docker login') {
