@@ -45,7 +45,7 @@ pipeline {
         stage('Docker push') {
             steps {
               
-                sh 'docker push'
+                sh 'docker push tonybas1982/address-book:${JOB_NAME}-${BUILD_NUMBER}'
             }
         }
     }
