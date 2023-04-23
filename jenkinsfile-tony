@@ -2,14 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('directory') {
-            steps {
-          
-                sh 'cd DevOpsClassCodes-aug'
         
-            }
-            
-        }
         stage('Checkout') {
             steps {
                 git 'https://github.com/Tony1982-sys/DevOpsClassCodes-aug.git'
@@ -20,7 +13,7 @@ pipeline {
          stage('Compiling') {
             steps {
           
-                echo 'hello world'
+                echo 'Hello World'
         
             }
             
