@@ -33,7 +33,7 @@ pipeline {
          stage('Docker build') {
             steps {
                 
-                sh 'sudo docker build -t tonybas1982/address-book:v1 .'
+                sh 'docker build -f Dockerfile -t tonybas1982/address-book:v1 .'
             }
         }
         stage('Docker login') {
