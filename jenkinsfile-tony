@@ -13,7 +13,7 @@ pipeline {
          stage('Compiling') {
             steps {
           
-                echo 'Hello World'
+                sh 'mvn compile'
         
             }
             
@@ -21,7 +21,7 @@ pipeline {
          stage('Testing') {
             steps {
                
-                echo 'hello world'
+                sh 'mvn test'
             }
         }
          stage('Package') {
