@@ -33,7 +33,7 @@ pipeline {
          stage('Docker build') {
             steps {
                
-                sh 'docker build -t tonybas1982/address-book:v1 .'
+                sh 'docker build -t tonybas1982/address-book:${JOB_NAME}-${BUILD_NUMBER} .'
             }
         }
         stage('Docker login') {
@@ -45,7 +45,7 @@ pipeline {
         stage('Docker push') {
             steps {
               
-                echo 'hello world'
+                sh 'docker push tonybas1982/address-book:${JOB_NAME}-${BUILD_NUMBER}'
             }
         }
     }
