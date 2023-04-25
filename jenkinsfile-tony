@@ -32,11 +32,16 @@ pipeline {
         }
          stage('Docker build') {
             steps {
-                sh 'docker login -u tonybas1982 -p Anicle1982#'
+               
                 sh 'docker build -t tonybas1982/address-book:v1 .'
             }
         }
-        
+        stage('Docker build') {
+            steps {
+                sh 'docker login -u tonybas1982 -p Anicle1982#'
+
+            }
+        }
         stage('Docker push') {
             steps {
               
